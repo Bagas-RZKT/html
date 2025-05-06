@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mei montain</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        .button-red {
+            background-color: red;
+            position: relative;
+        }
+        .button-blue {
+            background-color: rgb(63, 63, 159);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="4.jpg" alt="gambar anomali" width="200px">
+        <h1>mau ga jadi pacar ku?</h1>
+        <button class="button-red" id="tombolno">No</button> 
+        <button class="button-blue" onclick="terima()">yes</button>
+    </div>
+    <script>
+        function terima() {
+            Swal.fire({
+                title: "beneran mau?", 
+                icon: "success",
+                showDenyButton: true,
+                confirmButtonText: "chat wa"
+            }).then((result) => {
+                if(result.isConfirmed) {
+                    window.location.href = "https://wa.me/6281327642788?text=Gasskeunn%20siap%20explore%20alam%20semesta"
+                }
+            })
+        }
+
+        var tombolno = document.getElementById("tombolno")
+        tombolno.addEventListener("click", function() {
+            var yrandom = Math.floor(Math.random() * (300 - (-100) + 1)) + (-100)
+            var xrandom = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100)
+            tombolno.style.bottom = yrandom + "px"
+            tombolno.style.right = xrandom + "px"
+        })
+    </script>
+</body>
+</html>
